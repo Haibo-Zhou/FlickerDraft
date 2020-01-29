@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XDv-Vz-f6s">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="gdD-zl-dCg">
+            <objects>
+                <viewController id="XDv-Vz-f6s" customClass="SearchViewController" customModule="FlickerDraft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vea-MJ-N00">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by keyword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4B-js-ATI" userLabel="Search Label">
+                                <rect key="frame" x="15" y="54" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your text to search." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-9E-I9f" userLabel="Search Text Field">
+                                <rect key="frame" x="15" y="98" width="198" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOT-cX-1ja" userLabel="Search Button">
+                                <rect key="frame" x="15" y="152" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchButtonAction:" destination="XDv-Vz-f6s" eventType="touchUpInside" id="ZTG-9c-1E3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OIV-JA-mdh" userLabel="Flicker Image View">
+                                <rect key="frame" x="15" y="232" width="384" height="575"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BjA-Wi-IDh" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="F4B-js-ATI" secondAttribute="trailing" constant="253" id="1qb-RZ-BeH"/>
+                            <constraint firstItem="OIV-JA-mdh" firstAttribute="leading" secondItem="BjA-Wi-IDh" secondAttribute="leading" constant="15" id="5Fz-Gq-jcz"/>
+                            <constraint firstItem="jD1-9E-I9f" firstAttribute="leading" secondItem="BjA-Wi-IDh" secondAttribute="leading" constant="15" id="8O3-mV-Cju"/>
+                            <constraint firstItem="uOT-cX-1ja" firstAttribute="leading" secondItem="BjA-Wi-IDh" secondAttribute="leading" constant="15" id="KvS-fp-YHu"/>
+                            <constraint firstItem="jD1-9E-I9f" firstAttribute="top" secondItem="F4B-js-ATI" secondAttribute="bottom" constant="23" id="Oov-oW-KdV"/>
+                            <constraint firstItem="BjA-Wi-IDh" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="jD1-9E-I9f" secondAttribute="trailing" constant="201" id="Pt1-Oy-4dj"/>
+                            <constraint firstItem="F4B-js-ATI" firstAttribute="leading" secondItem="BjA-Wi-IDh" secondAttribute="leading" constant="15" id="UpK-CC-OE9"/>
+                            <constraint firstItem="BjA-Wi-IDh" firstAttribute="bottom" secondItem="OIV-JA-mdh" secondAttribute="bottom" priority="999" constant="55" id="XuZ-Im-phS"/>
+                            <constraint firstItem="OIV-JA-mdh" firstAttribute="top" secondItem="uOT-cX-1ja" secondAttribute="bottom" priority="999" constant="50" id="dTW-Qn-6Rw"/>
+                            <constraint firstItem="BjA-Wi-IDh" firstAttribute="trailing" secondItem="OIV-JA-mdh" secondAttribute="trailing" constant="15" id="eIK-Qt-iU0"/>
+                            <constraint firstItem="F4B-js-ATI" firstAttribute="top" secondItem="BjA-Wi-IDh" secondAttribute="top" constant="10" id="k2v-Iv-7zd"/>
+                            <constraint firstItem="OIV-JA-mdh" firstAttribute="centerX" secondItem="vea-MJ-N00" secondAttribute="centerX" id="kYm-PB-a9u"/>
+                            <constraint firstItem="uOT-cX-1ja" firstAttribute="top" secondItem="jD1-9E-I9f" secondAttribute="bottom" constant="20" id="pnf-s8-brr"/>
+                            <constraint firstItem="BjA-Wi-IDh" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="uOT-cX-1ja" secondAttribute="trailing" constant="351" id="wK5-3g-cYf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BjA-Wi-IDh"/>
+                    </view>
+                    <connections>
+                        <outlet property="flickerImageView" destination="OIV-JA-mdh" id="bMs-5C-iJc"/>
+                        <outlet property="searchButton" destination="uOT-cX-1ja" id="QYF-9f-d75"/>
+                        <outlet property="searchTextField" destination="jD1-9E-I9f" id="kmI-EZ-Cam"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTX-gw-TdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118.84057971014494" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+</document>
